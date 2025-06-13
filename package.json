@@ -1,0 +1,45 @@
+{
+    "name": "genai-final",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder --win"
+    },
+    "build": {
+        "appId": "com.camyo.cybersecuritychatbot",
+        "productName": "Cybersecurity Chatbot",
+        "files": [
+            "main.js",
+            "preload.js",
+            "renderer.js",
+            "db.js",
+            "index.html",
+            "styles.css",
+            "sqlite.db",
+            "node_modules/**/*",
+            "package.json"
+        ],
+        "win": {
+            "target": [
+                "nsis"
+            ],
+            "icon": "icon.ico"
+        },
+        "nsis": {
+            "oneClick": false,
+            "allowToChangeInstallationDirectory": true
+        }
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "sqlite3": "^5.1.7"
+    },
+    "devDependencies": {
+        "electron": "^33.2.1",
+        "electron-builder": "^25.1.8"
+    }
+}

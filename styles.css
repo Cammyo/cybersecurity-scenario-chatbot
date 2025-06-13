@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #8b8b8b, #6b6b6b, #4b4b4b);
+    color: #fff;
+  }
+  
+  /* Layout */
+  .app-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar h2 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .scenario-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+  }
+  
+  .scenario-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .scenario-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .delete-button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .delete-button:hover {
+    background-color: #c0392b;
+  }
+  
+  .add-scenario {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  .add-scenario input {
+    flex: 1;
+    padding: 8px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+  }
+  
+  .add-scenario input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .add-scenario button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .add-scenario button:hover {
+    background-color: #218838;
+  }
+  
+  /* Chat Area */
+  .chat-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    margin: 15px;
+    padding: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+  }
+  
+  .messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  
+  .chat-input {
+    display: flex;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    position: sticky;
+    bottom: 0;
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+  }
+  
+  .chat-input input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .chat-input button {
+    padding: 12px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .chat-input button:hover {
+    background-color: #0056b3;
+  }
+  
+/* User Message */
+.user-message {
+    background-color: #555555;
+    text-align: right;
+    color: #cacaca;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #bebebe;
+    border-radius: 10px;
+  }
+  
+/* Bot Message */
+.bot-message {
+    background-color: #333333;
+    text-align: left;
+    color: #cacaca;
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #6e6e6e;
+    border-radius: 10px;
+}
+
+.user-message p, .bot-message p {
+  margin: 0; /* Remove default paragraph margin */
+  line-height: 1.5; /* Improve readability */
+  word-wrap: break-word; /* Handle long text gracefully */
+}
+
+.bot-message pre {
+  white-space: pre-wrap; /* Wrap long lines while preserving formatting */
+  word-wrap: break-word; /* Prevent overflow */
+  font-family: inherit; /* Match app font */
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+#new-scenario-button {
+  display: block;
+  width: 90%;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b); /* Modern gradient */
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+#new-scenario-button:hover {
+  background: linear-gradient(90deg, #feb47b, #ff7e5f); /* Reverse gradient */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+  transform: translateY(-2px); /* Subtle lift effect */
+}
+
+#new-scenario-button:active {
+  transform: translateY(0); /* Return on click */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Reset shadow */
+}

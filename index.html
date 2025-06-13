@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Sidebar for scenarios -->
+    <div class="sidebar">
+      <h2>Scenarios</h2>
+      <button id="new-scenario-button">Start New Scenario</button>
+      <ul id="scenario-list" class="scenario-list"></ul>
+      <div class="add-scenario">
+        <input type="text" id="new-scenario" placeholder="Add a new scenario">
+        <button id="add-scenario">Add</button>
+      </div>
+    </div>
+
+    <!-- Main Chat Area -->
+    <div class="chat-container">
+      <div id="messages" class="messages"></div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-message">Send</button>
+      </div>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
