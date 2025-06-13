@@ -13,5 +13,6 @@ A cybersecurity scenario generation chatbot for attackers/defenders to hack/prot
 
 ## Installation/Building
 All you need is node. Configured for windows x64 but could be built any platform.
+
 npm install -> npm start -> npm run build
 
