@@ -12,7 +12,7 @@ A cybersecurity scenario generation chatbot for attackers/defenders to hack/prot
 - SQLite to fulfill a database requirement for the assignment.
 
 ## Installation/Building
-All you need is node. Configured for windows x64 but could be built any platform.
+All you need is node. Configured for windows x64 but could be built for any platform.
 
 ```
 npm install
